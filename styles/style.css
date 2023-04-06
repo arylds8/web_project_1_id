@@ -144,7 +144,7 @@
   padding: 0 auto;
 }
 
-.digits-title{
+.section-title{
   text-align: center;
   width: 60%;
   line-height: 69px;
@@ -153,7 +153,7 @@
   margin: 0 auto;
 }
 
-.digits-subtitle{
+.section-subtitle{
   line-height: 69px;
   font-size: 24px;
   font-weight: normal;
@@ -162,26 +162,26 @@
   margin: 20px auto;
 }
 
-.digits-table{
+.table{
   width: 1100px;
   margin: 60px auto 100px;
   display: flex;
-  justify-content: space-between;
   flex-wrap: wrap;
+  justify-content: space-between;
 }
 
-.digits-cell{
+.table__cell{
   width: 250px;
   list-style: none;
 }
 
-.digits-cell__heading{
+.table__heading{
   line-height: 1.15px;
   font-size: 24px;
   font-weight: bold;
 }
 
-.digits-cell__text{
+.table__text{
   line-height: 1.2;
   font-size: 18px;
   font-weight: normal;
@@ -191,7 +191,7 @@
 
 .feynman{
   margin: 0 auto;
-  height: 700px;
+  min-height: 700px;
   padding-top: 100px;
   position: relative;
   z-index: -1;
@@ -243,7 +243,7 @@
   margin: 0 auto;
   padding-top: 90px;
   padding-bottom: 90px;
-  background-color: #000000;
+  background-color: #1F1F1F;
   color: #F2F2F2;
   position: relative;
   z-index: 0;
@@ -268,7 +268,7 @@
   text-align: center;
 }
 
-.kaufman-table_theme_dark{
+.table_theme_dark{
   list-style: none;
   position: relative;
   z-index: 1;
@@ -292,7 +292,7 @@
 }
 
 /* including elements with key-value modifiers */
-.kaufman__cell_theme-dark {
+.table__cell_theme-dark {
   width: 200px;
   color: white;
   margin-right: 0;
@@ -312,18 +312,10 @@
 
 .footer{
   min-height: 350px;
-  background-color: #000000;
+  background-color: #1F1F1F;
   color: #F2F2F2;
   margin: 0 auto;
   position: relative;
-}
-
-.logo_place-footer{
-  width: 183px;
-  height: 35px;
-  position: absolute;
-  top: 0;
-  left: 0;
 }
 
 .footer__columns{
@@ -334,20 +326,21 @@
   margin: 0 auto;
 }
 
-.footer__column_content-copyright{
+.footer__column_content_copyright{
   flex-basis: 711px;
   display: flex;
-  position: relative;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-between;
+  align-content: space-between;
 }
 
 .footer__author{
   line-height: 25px;
   font-size: 18px;
   font-weight: normal;
-  position: absolute;
-  left: 0;
-  bottom: 18px;
-  margin: 0;
+  margin-top: 18px;
+  margin-bottom: 18px;
 }
 
 .footer__column-heading{
@@ -371,7 +364,6 @@
   padding: 0;
   list-style: none;
   margin-top: 20px;
-  list-style: none;
 }
 
 .footer__link{
