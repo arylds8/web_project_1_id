@@ -1,373 +1,352 @@
-.page {
-  min-width: 1100px;
-  /* we don't know how to make mobile versions of websites yet, */
-  /* so here we've set a minimum page width */
-  max-width: 1600px;
-  /* here we've set a maximum page width */
-  margin: 0 auto;
-  /* this ensures that all content is centered on screens wider than 1600px */
-  font-family: 'Helvetica Neue', Arial, sans-serif;
+/*
+ * Perataan fon untuk seluruh halaman, lihat lebih lanjut mengenai
+ * cara menyesuaikan situs web untuk perangkat
+ */
+
+ .page {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  -webkit-text-size-adjust: 100%;
+  -ms-font-feature-settings: "kern" 1;
+  font-feature-settings: "kern";
 }
 
-.header {
+/*
+ * Kita membuat seluruh bagian dalam formulir rata kiri
+ * selaras dengan pemosisian tetap
+ */
+
+.form {
+  width: 320px;
   height: 100vh;
-  min-height: 600px;
-  max-height: 756px;
-  /* parameters for the header section */
-  background-color: #F2F2F2;
-  margin: 0;
-  position: relative;
-  display: flex;
-}
-
-
-
-/* here we have two examples of selectors in order to remind you how to set styles for elements */
-.header__square-pic {
-  height: 568px;
-  width: 568px;
-}
-
-.logo{
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  width: 154px;
-  height: 31px;
-}
-
-.logo_place_header{
-  position: absolute;
-  z-index: 1;
-  top: 34px;
-  left: 64px;
-}
-
-.header__main-illustration{
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  width: 756px;
-  height: 608px;
-  position: absolute;
-  bottom: 0px;
-  right: 0px;
-  z-index: 1;
-}
-
-.header__square{
-  width: 568px;
-  height: 568px;
-  background-color:#2F80ED;
-  position: absolute;
-  top: 64px;
-  right: 0;
-  z-index:0;
-}
-
-.header__title{
-  align-self: center;
-  margin-left: 64px;
-  line-height: 96px;
-  font-size: 102px;
-  font-weight: bold;
-  width: 730px;
-}
-
-.header__subtitle{
-  line-height: 25px;
-  font-size: 18px;
-  font-weight: normal;
-  position: absolute;
-  z-index: 1;
-  bottom: 30px;
-  left: 64px;
-  width: 388px;
-}
-
-.header__link{
-  color: #2F80ED;
-  position: absolute;
-  bottom: 30px;
-  left: 64px;
-  text-decoration: none;
-}
-
-/* Description */
-
-.description{
-  margin: 100px auto;
-}
-
-.two-columns{
-  display: flex;
-  justify-content: space-between;
-  width: 80%;
-  margin: 0 auto;
-}
-
-.two-columns__brief{
-  width: 175px;
-  margin-top: 0;
-  color: #2F80ED;
-  font-size: 18px;
-  font-weight: normal;
-  line-height: 1.2;
-}
-
-.two-columns__main-text{
-  display: flex;
-  flex-direction: column;
-  width: 80%;
-  min-width: 784px;
-  margin-top: 0;
-}
-
-.two-columns__paragraph{
-  line-height: 34px;
-  font-size: 24px;
-  font-weight: normal;
-  margin-top: 0;
-}
-
-.two-columns__span-accent{
-  line-height: 34px;
-  font-size: 24px;
-  font-weight: bold;
-}
-
-
-/* digit group*/
-
-.digits{
-  margin: 0 auto 100px;
-  padding: 0 auto;
-}
-
-.section-title{
-  text-align: center;
-  width: 60%;
-  line-height: 69px;
-  font-size: 60px;
-  font-weight: bold;
-  margin: 0 auto;
-}
-
-.section-subtitle{
-  line-height: 69px;
-  font-size: 24px;
-  font-weight: normal;
-  width: 60%;
-  text-align: center;
-  margin: 20px auto;
-}
-
-.table{
-  width: 1100px;
-  margin: 60px auto 100px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-
-.table__cell{
-  width: 250px;
-  list-style: none;
-}
-
-.table__heading{
-  line-height: 1.15px;
-  font-size: 24px;
-  font-weight: bold;
-}
-
-.table__text{
-  line-height: 1.2;
-  font-size: 18px;
-  font-weight: normal;
-}
-
-/* feyman block */
-
-.feynman{
-  margin: 0 auto;
-  min-height: 700px;
-  padding-top: 100px;
-  position: relative;
-  z-index: -1;
-  background-color: #F2F2F2;
-  }
-
-.feynman__img{
-  position: absolute;
-  bottom: 0;
+  background: rgba(255, 255, 255, .95);
+  border-right: 1px solid #000;
+  position: fixed;
+  top: 0;
   left: 0;
-  z-index: 0;
+  transition: left .5s;
+  font-family: 'Alegreya Sans', sans-serif;
 }
 
-.feynman__title{
-  width: 775px;
-  line-height: 1.15;
-  font-size: 120px;
-  font-weight: bold;
-  text-align: center;
-  margin: 100px auto 70px;
-  position: relative;
-  z-index: 1;
+/*
+ * Kelas dibuat untuk menganimasikan kolom dengan formulir.
+ * Properti kiri akan berubah dengan halus, menghapus
+ * bagian dari layar pada waktu yang tepat
+ */
+
+.form_is-closed {
+  left: -320px;
 }
 
-.feynman__subtitle{
-  margin: 0;
-  line-height: 51px;
-  font-size: 35px;
-  font-weight: normal;
-  text-align: center;
-  position: relative;
-  z-index: 1;
-}
+/* Blok dengan ikon untuk menyembunyikan dan menampilkan bagian yang memiliki formulir */
 
-.feynman__link{
-  position: absolute;
-  top: 50%;
-  right: 48px;
-  z-index: 1;
-  line-height: 51px;
-  font-size: 36px;
-  font-weight: normal;
-  color: #2F80ED;
-}
-
-/* kaufman */
-
-.kaufman{
-  margin: 0 auto;
-  padding-top: 90px;
-  padding-bottom: 90px;
-  background-color: #1F1F1F;
-  color: #F2F2F2;
-  position: relative;
-  z-index: 0;
-  overflow: hidden;
-}
-
-.kaufman-title_theme_dark{
-  margin: 90px auto 20px;
-  width: 60%;
-  line-height: 69px;
-  font-size: 60px;
-  font-weight: bold;
-  text-align: center;
-}
-
-.kaufman-subtitle_theme_dark{
-  width: 60%;
-  margin: 0 auto;
-  line-height: 34px;
-  font-size: 24px;
-  font-weight: normal;
-  text-align: center;
-}
-
-.table_theme_dark{
-  list-style: none;
-  position: relative;
-  z-index: 1;
-  width: 1100px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
-
-.kaufman-cell__heading_theme_dark{
-  line-height: 1.15;
-  font-size: 24px;
-  font-weight: bold;
-}
-
-.kaufman-cell__text_theme_dark{
-  line-height: 1.2;
-  font-size: 18px;
-  font-weight: normal;
-}
-
-/* including elements with key-value modifiers */
-.table__cell_theme-dark {
-  width: 200px;
-  color: white;
-  margin-right: 0;
-  margin-top: 80px;
-}
-
-.kaufman__triangle{
+.form__toggle {
+  width: 50px;
+  height: 50px;
+  background-color: rgba(0, 0, 0, .95);
   position: absolute;
   top: 0;
-  right: -124px;
-  width: 636px;
-  height: 660px;
-  z-index: -1;
-}
-
-/* footer block */
-
-.footer{
-  min-height: 350px;
-  background-color: #1F1F1F;
-  color: #F2F2F2;
-  margin: 0 auto;
-  position: relative;
-}
-
-.footer__columns{
-  width: 90%;
+  right: -50px;
   display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  margin: 0 auto;
+  cursor: pointer;
+  transition: opacity .4s;
 }
 
-.footer__column_content_copyright{
-  flex-basis: 711px;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  justify-content: space-between;
-  align-content: space-between;
+.form__toggle:hover {
+  opacity: .8;
 }
 
-.footer__author{
-  line-height: 25px;
-  font-size: 18px;
-  font-weight: normal;
-  margin-top: 18px;
-  margin-bottom: 18px;
+.form__toggle-image {
+  width: 12px;
+  height: 20px;
+  margin: auto;
 }
 
-.footer__column-heading{
+/* Merotasi ikon animasi bagian formulir */
+
+.form_is-closed .form__toggle-image {
+  transform: rotate(180deg);
+}
+
+/*
+ * Tinggi kontainer dihitung dengan fungsi calc
+ * yang akan kita bahas dalam pelajaran tentang tata letak adaptif dan responsif.
+ * Properti *overflow* mengontrol perilaku kontainer eksternal
+ * jika konten tidak sesuai dengan dimensinya.
+ * Dalam hal ini, bilah gulir vertikal akan muncul.
+ */
+
+.form__main-container {
+  height: calc(100vh - 40px);
+  overflow-y: scroll;
+}
+
+/* Judul formulir */
+
+.form__heading {
+  font-size: 28px;
+  line-height: 32px;
+  width: 240px;
+  margin: 23px auto 0;
+}
+
+.form__heading_type_ctrl-el-heading {
+  margin: 35px auto 0;
+  font-size: 20px;
   line-height: 30px;
-  font-size: 18px;
-  font-weight: bold;
-  margin-top: 0;
+  font-weight: normal;
 }
 
-.footer__icon{
+/* Formulir itu sendiri */
+
+.form__admin {
+  height: 100vh;
+}
+
+/* Gaya untuk semua elemen *fieldset* */
+
+.form__input-container {
+  width: 240px;
+  margin: auto;
+  padding-bottom: 50px;
+  border:0;
+
+}
+
+/* Garis yang memisahkan *fieldset* */
+
+.form__line {
+  height: 1px;
+  background-color: #000;
+}
+
+/* Gaya umum untuk semua label */
+
+.form__label {
+  display: block;
+  margin: 35px auto 0;
+  font-size: 20px;
+  line-height: 30px;
+}
+
+/* Gaya umum untuk semua kolom input */
+
+.form__item {
+  border: 0;
+  width: 100%;
+  height: 24px;
+  box-sizing: border-box;
+  border-bottom: 1px solid #bcbcc4;
+  background-color: transparent;
+  margin-top: 5px;
+  font-size: 14px;
+  font-family: inherit;
+}
+
+
+/* Mengubah warna garis saat kolom input diaktifkan */
+
+.form__item:focus{
+  outline-color: #fff6c5;
+}
+
+/* Gaya *placeholder* */
+
+/* Kolom input */
+
+.form__item_el_main-text{
+  background: #fff;
+  height: 150px;
+  font-size: 14px;
+  padding: 6px 6px 4px;
+  border: 1px solid #bcbcc4;
+}
+
+.form__item_el_extra-options {
+  position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+}
+
+.form__item_el_number-of-columns {
+  position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+}
+
+ .form__item[type="number"] {
+  background-color: white;
+  color: black;
+  border: 1px solid #bcbcc4;
+  padding: 0 4px;
+}
+
+
+ .form__item[type="date"] {
+  background-color: white;
+  color: black;
+  border: 1px solid #bcbcc4;
+  padding: 0 4px;
+  font-family: 'Alegreya Sans', sans-serif;
+}
+
+
+ .form__item[type="color"] {
+  height: 30px;
+  width: 48px;
+  border-bottom: 0;
+  padding: 0;
+}
+
+
+.form__item[type="range"] {
+  width: 144px;
+}
+
+
+/* Kolom daftar drop-down dengan kelas form_item */
+
+select.form__item {
+  background-color: white;
+  color: black;
+  border: 1px solid #bcbcc4;
+}
+
+
+.form__label_direction_right {
+  display: inline;
+  font-size: 14px;
+  line-height: 30px;
+  margin-left: 10px;
+}
+
+.form__pseudo-item{
+  display: inline-block; /* Anda sekarang dapat menentukan lebar dan tinggi dari elemen span */
+  vertical-align: middle; /* Ini akan mengatur perataan vertikal yang tepat untuk elemen dan teks. Properti ini bekerja bersama dengan inline-clock */
   width: 16px;
   height: 16px;
-  margin-left: 0;
-  margin-right: 10px;
+  border: 1px solid black;
 }
 
-.footer__list{
+/* Area untuk tombol, dan tombol */
+
+.form__handlers {
+  margin: 0;
+  width: 320px;
+  height: 40px;
+  border:0;
+  font-size:0;
+}
+
+/* Gaya umum untuk semua tombol */
+
+ .form__button {
+  width: 50%;
+  height: 40px;
+  font-size: 14px;
+  border: 0;
+  margin: 0;
+  padding-bottom: 5px;
+  cursor: pointer;
+  transition: opacity .4s;
+  color: white;
+  font-family: inherit;
+}
+
+.form__button:hover {
+  opacity: .7;
+}
+
+
+/* Mengubah warna garis saat tombol diaktifkan */
+
+.form__button:focus{
+  outline-color: #fff6c5;
+}
+
+.form__button[type="submit"]{
+  background-color: #000;
+}
+
+
+.form__button[type="reset"]{
+  background-color: #ea3a3a;
+}
+
+
+/* Gaya halaman */
+
+.content {
+  font-family: 'Playfair Display', serif;
+  width: 90%;
+  margin: 0 auto;
+  padding-top: 60px;
+}
+
+.content__heading {
+  font-size: 55px;
+  width: 523px;
+  margin: auto;
+  line-height: 60px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.content__subheading {
+  text-align: center;
+  width: 430px;
+  font-size: 20px;
   line-height: 30px;
-  font-size: 18px;
-  font-weight: normal;
-  padding: 0;
-  list-style: none;
+  margin: 40px auto;
+}
+
+.content__image-item {
+  width: 100%;
+}
+
+.content__image-copyright {
+  font-size: 14px;
   margin-top: 20px;
 }
 
-.footer__link{
-  padding: 0;
-  text-decoration: none;
-  color: #F2F2F2;
+/*
+ * Di sini kita menerapkan dua properti yang baru Anda pelajari:
+ * column-count dan column-gap.
+ * Properti ini memecah teks menjadi kolom.
+ * "column-count: 1" berarti teks satu kolom
+ * "column-gap: 40px" menyatakan jarak yang disarankan antar kolom
+ */
+
+.content__text {
+  width: 70%;
+  font-size: 20px;
+  line-height: 30px;
+  margin: 30px auto;
+  column-count: 1;
+  column-gap: 40px;
+}
+
+.content__paragraph {
+  margin: 30px 0;
+}
+
+.content__link {
+  color: black;
+}
+
+.content__date {
+  font-size: 20px;
+  width: 70%;
+  margin: 90px auto 0;
+  text-decoration: underline;
+}
+
+
+.footer__container {
+  height: 100px;
 }
