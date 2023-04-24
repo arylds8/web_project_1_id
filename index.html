@@ -4,8 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./styles/normalize.css">
-    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./pages/index.css">
     <title>Mempelajari cara belajar</title>
 </head>
 
@@ -20,7 +19,7 @@
           <img class="header__main-illustration" src="./images/header-image.png" alt="Pemikir handal berdiri di puncak gunung membahas
           poin-poin penting dari sistem pendidikan modern, sambil juga
           bertanya-tanya dari mana kotak biru raksasa itu berasal.">
-          <div class="header__square"></div>
+          <div class="header__square rotation"></div>
         </header>
 
         <main class="content">
@@ -35,10 +34,71 @@
               </article>
             </section>
 
+            <section class="techniques">
+              <h2 class="section-title">Teknik Pembelajaran</h2>
+              <h3 class= "section-subtitle">Lima Strategi dari Barbara Oakley</h3>
+              <div class="cards">
+                <div class="cards__item">
+                  <img class="cards__image" src="./images/cards-attention.png" alt="cards-attention">
+                  <h4 class="cards__title">Dua Cara Berpikir</h4>
+                  <p class="cards__description">Pemahaman yang mendalam berasal dari kemampuan untuk beralih antara pemikiran yang terfokus dan pemikiran yang tersebar</p>
+                </div>
+                <div class="cards__item">
+                  <img class="cards__image" src="./images/cards-recall.png" alt="cards-recall">
+                  <h4 class="cards__title">Mengingat</h4>
+                  <p class="cards__description">Meningkatkan kemampuan Anddalam mengingat informasi penting membantu Anda menghubungkan bagian otak yang berbeda.</p>
+                </div>
+                <div class="cards__item">
+                  <img class="cards__image" src="./images/cards-interleaving.png" alt="cards-interleaving">
+                  <h4 class="cards__title">Mengikat</h4>
+                  <p class="cards__description">Ketika Anda mempelajari beberapa keterampilan secara bersamaan, masing-masing keterampilan yang Anda pelajari akan saling menguatkan satu sama lain.</p>
+                </div>
+                <div class="cards__item">
+                  <img class="cards__image" src="./images/cards-question.png" alt="cards-question">
+                  <h4 class="cards__title">Bertanya</h4>
+                  <p class="cards__description">Saat menyimak pelajaran dari guru, temukan pertanyaan yang bagus, yaitu hal-hal yang ingin Anda ketahui lebih dalam.</p>
+                </div>
+                <div class="cards__item">
+                  <img class="cards__image" src="./images/cards-competence.png" alt="cards-competence">
+                  <h4 class="cards__title">Ilusi Kompetensi</h4>
+                  <p class="cards__description">Uji diri sendiri, tuliskan hal yang Anda pelajari, ajarkan pada orang lain, dan ulangi hal tersebut saat Anda mempelajari hal baru. Hanya setelah Anda melakukannya, Anda dapat benar-benar yakin bahwa Anda telah memahami suatu hal.</p>
+                </div>
+              </div>
+            </section>
+
+            <section class="video">
+              <h2 class="section-title">Ceramah TED</h2>
+              <h3 class= "section-subtitle">Bagi orang yang suka menunda</h3>
+              <div class="video__iframes">
+                <iframe class="video__iframe" width="560" height="315" src="https://www.youtube.com/embed/5MgBikgcWnY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <iframe class="video__iframe" width="560" height="315" src="https://www.youtube.com/embed/arj7oStGLkU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+              </div>
+            </section>
+
+            <section class="oakley">
+
+              <article class="two-columns">
+                <h2 class="two-columns__brief">Kisah Barbara Oakley</h2>
+                <div class="two-columns__main-text">
+                  <p class="two-columns__paragraph">Saat masih kecil, Barbara sulit memahami matematika.
+                    Ia berpikir bahwa ia lebih menyukai ilmu humaniora meskipun ia tidak terlalu cerdas di bidang tersebut. Untuk mewujudkan cita-citanya menjadi ahli bahasa, setelah menamatkan sekolah, ia mendaftar sebagai tentara, kemudian ia dikirim untuk mempelajari bahasa Rusia.
+                    Setelah beberapa tahun bertugas dan meningkatkan karier hingga mencapai pangkat Kapten, Barbara keluar dari dunia militer dan memutuskan untuk mempelajari teknik. Saat mempelajari teknik, ia mulai mengembangkan metodologi pembelajarannya karena ia dipaksa untuk memprogram ulang otaknya agar dapat menerima materi yang berbeda.
+                    Ternyata, saat kita tidak berbakat akan suatu hal, kerja keras kita dalam mempelajari hal yang mudah bagi orang lain tersebut akan membuat kita memahaminya dengan lebih mendalam dan komprehensif.</p>
+                </div>
+              </article>
+
+            </section>
+
+            <section class="feynman">
+              <h2 class="feynman__title">Teknik Feynman</h2>
+              <h3 class="feynman__subtitle">Belajar tanpa lupa</h3>
+              <a class="feynman__link" href="#" >Selengkapnya &#8594;</a>
+              <img class="feynman__img" src="./images/feynman.png" alt="A picture of Richard Feynman, a world-renowned quantum physicist. The Feynman Technique is derived from his studying methods when he was a student at Princeton.">
+            </section>
+
             <section class="digits">
                 <h2 class="section-title">Fakta dan angka</h2>
                 <h3 class="section-subtitle">Tentang belajar dan otak</h3>
-
                 <div class="table">
                   <div class="table__cell">
                     <h4 class="table__heading">86 miliar</h4>
@@ -75,14 +135,21 @@
                     <p class="table__text">Publikasi penelitian Ivan Pavlov tentang pengkondisian klasik</p>
                   </div>
                 </div>
-
             </section>
 
-            <section class="feynman">
-              <h2 class="feynman__title">Teknik Feynman</h2>
-              <h3 class="feynman__subtitle">Belajar tanpa lupa</h3>
-              <a class="feynman__link" >More &#8594;</a>
-              <img class="feynman__img" src="./images/feynman.png" alt="A picture of Richard Feynman, a world-renowned quantum physicist. The Feynman Technique is derived from his studying methods when he was a student at Princeton.">
+            <section class="khan">
+              <div class="khan__container">
+                <h3 class="khan__author">Salman khan</h3>
+                <h2 class="khan__title">The One World Schoolhouse</h2>
+                <p class="khan__quote">Semangat dan inovasi Sal Khan mengubah pembelajaran bagi jutaan siswa di seluruh dunia.
+                  The One World Schoolhouse adalah bacaan wajib bagi siapa pun yang berkomitmen untuk meningkatkan kualitas pendidikan dan menginginkan siswa di mana pun mendapatkan keterampilan dan pengetahuan yang diperlukan untuk sukses di sekolah, karier, dan kehidupan secara umum.</p>
+                <p class="khan__quote-author">George Lucas</p>
+                <p class="khan__quote-author-subline">Pembuat Film</p>
+                <div class="khan__book-container">
+                  <img class="khan__book-pic" src="./images/khan-book-2.png" alt="">
+                  <a class="khan__buy-link" href="#">Beli buku &#8594;</a>
+                </div>
+              </div>
             </section>
 
             <section class="kaufman">
@@ -132,8 +199,20 @@
                   <p class="table__text table__text_theme_dark">Tekankan fokus pada kecepatan dan kuantitas</p>
                 </li>
               </ul>
-                <img class="kaufman__triangle" src="./images/kaufman-triangle.svg" alt="Segitiga biru besar yang diklaim sebagai milik Josh Kaufman">
+                <img class="kaufman__triangle rotation" src="./images/kaufman-triangle.svg" alt="Segitiga biru besar yang diklaim sebagai milik Josh Kaufman">
             </section>
+
+            <section class="resources">
+              <h2 class="section-title">Sumber daya yang berguna</h2>
+              <h3 class= "section-subtitle">Material lebih lanjut tentang teknik pembelajaran dan tip.</h3>
+              <div class="resources__logo-zone">
+                <img class="resources__logo" src="./images/logo/resources-tedED.png" alt="logo TED">
+                <img class="resources__logo" src="./images/logo/resources-Medium.png" alt="logo Medium">
+                <img class="resources__logo" src="./images/logo/resources-dezeen.png" alt="logo dezeen">
+                <img class="resources__logo" src="./images/logo/resources-goodreads.png" alt="logo goodreads">
+              </div>
+            </section>
+
         </main>
         <footer class="footer">
           <div class="footer__columns">
